@@ -2,7 +2,7 @@
 int servoPin = 7;
 Servo Servo1;
 
-int mode = 2;
+int mode = 1;
 
 void setup() {
    Servo1.attach(servoPin);
@@ -27,9 +27,9 @@ void modeOne(){
   int loops = 6;
   while (loops > 0){
     Servo1.write(0);
-    delay(500);
+    delay(600);
     Servo1.write(90);
-    delay(500); 
+    delay(600); 
     loops -= 1;
   }
   
@@ -42,16 +42,4 @@ void modeTwo(){
   Servo1.write(120);
   delay(1000);
   Servo1.write(90);
-}
-
-void testMovements(){
-   // Make servo go to 0 degrees 
-   Servo1.write(0); 
-   delay(1000); 
-   // Make servo go to 90 degrees 
-   Servo1.write(90); 
-   delay(1000); 
-   // Make servo go to 180 degrees 
-   Servo1.write(180); 
-   delay(1000); 
 }
