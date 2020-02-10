@@ -40,16 +40,16 @@ void switchToModeTwo(){
 }
 
 void modeOne(){
-  int loops = 6;
+  int loops = random(4,8);
   while (loops > 0){
-    Servo1.write(0);
-    delay(600);
     Servo1.write(90);
+    delay(600);
+    Servo1.write(180);
     delay(600); 
     loops -= 1;
   }
   
-  Servo1.write(180);
+  Servo1.write(35);
   delay(1000);
   Servo1.write(90);
 
@@ -59,7 +59,7 @@ void modeOne(){
 void modeTwo(){
   Servo1.write(90);
   delay(600);
-  Servo1.write(120);
+  Servo1.write(20);
   delay(1000);
   Servo1.write(90);
 
